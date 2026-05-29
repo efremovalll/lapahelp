@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Помощь приюту «Лапа помощи» — пожертвования, волонтёрство, вещи.">
+    <title>Приют «Лапа помощи» — Как помочь</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Приют Лапа помощи — на главную">
+                <i class="fa-solid fa-paw logo__icon"></i>
+                <span>Лапа помощи</span>
+            </a>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="pets.html" class="nav__link">Питомцы</a></li>
+                    <li><a href="help.html" class="nav__link nav__link--active">Помочь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section--bg-white">
+            <div class="container">
+                <h2 class="section__title">Как вы можете помочь</h2>
+                <p class="section__subtitle">Даже небольшая поддержка имеет огромное значение</p>
+                <div class="help-grid">
+                    
+                    <div class="help-info">
+                        <ul class="help-info__list">
+                            <li class="help-info__item">
+                                <i class="fa-solid fa-heart help-info__icon"></i>
+                                <span><strong>Пожертвование.</strong> Средства идут на корм, лечение и содержание питомцев.</span>
+                            </li>
+                            <li class="help-info__item">
+                                <i class="fa-solid fa-hand-holding-heart help-info__icon"></i>
+                                <span><strong>Волонтёрство.</strong> Приходите гулять с кошками и помогать в уборке.</span>
+                            </li>
+                            <li class="help-info__item">
+                                <i class="fa-solid fa-house-chimney help-info__icon"></i>
+                                <span><strong>Дом.</strong> Станьте новой семьёй для одного из наших подопечных.</span>
+                            </li>
+                            <li class="help-info__item">
+                                <i class="fa-solid fa-box help-info__icon"></i>
+                                <span><strong>Вещи.</strong> Принимаем корм, наполнитель, когтеточки и игрушки.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="donate-form">
+                        <h3 class="donate-form__title">Сделать взнос</h3>
+                        <form id="donateForm" novalidate>
+                            <div class="donate-form__group">
+                                <label for="donateName" class="donate-form__label">Ваше имя</label>
+                                <input type="text" id="donateName" name="name" class="donate-form__input" placeholder="Иван Петров" required>
+                            </div>
+                            <div class="donate-form__group">
+                                <label for="donateAmount" class="donate-form__label">Сумма, ₽</label>
+                                <input type="number" id="donateAmount" name="amount" class="donate-form__input" placeholder="500" min="1" value="500" required>
+                            </div>
+                            <button type="submit" class="btn btn--block">Поддержать приют</button>
+                            <p id="donateMessage" class="donate-form__message" role="status"></p>
+                        </form>
+                    </div>
+
+                </div>
+                <div style="text-align: center; margin-top: 32px;">
+                    <a href="index.html" class="btn btn--outline"><i class="fa-solid fa-arrow-left"></i> На главную</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__copy">© 2026 Приют «Лапа помощи». Сделано с любовью к кошкам.</p>
+            <ul class="footer__socials">
+                <li><a href="https://vk.com/" target="_blank" rel="noopener" class="footer__social-link" aria-label="ВКонтакте"><i class="fa-brands fa-vk"></i></a></li>
+                <li><a href="https://t.me/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('donateForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('donateName');
+            const amountInput = document.getElementById('donateAmount');
+            const messageBox = document.getElementById('donateMessage');
+
+            const name = nameInput.value.trim();
+            const amount = parseInt(amountInput.value, 10);
+
+            messageBox.className = 'donate-form__message';
+            messageBox.textContent = '';
+
+            if (!name) {
+                messageBox.textContent = 'Пожалуйста, укажите ваше имя.';
+                messageBox.classList.add('donate-form__message--error');
+                nameInput.focus();
+                return;
+            }
+
+            if (!amount || amount <= 0) {
+                messageBox.textContent = 'Сумма должна быть больше нуля.';
+                messageBox.classList.add('donate-form__message--error');
+                amountInput.focus();
+                return;
+            }
+
+            messageBox.textContent = `Спасибо, ${name}! Ваш взнос на ${amount} ₽ очень поможет питомцам.`;
+            messageBox.classList.add('donate-form__message--success');
+
+            nameInput.value = '';
+            amountInput.value = '500';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Питомцы приюта «Лапа помощи» — кошки, которые ищут дом.">
+    <title>Приют «Лапа помощи» — Питомцы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Приют Лапа помощи — на главную">
+                <i class="fa-solid fa-paw logo__icon"></i>
+                <span>Лапа помощи</span>
+            </a>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="pets.html" class="nav__link nav__link--active">Питомцы</a></li>
+                    <li><a href="help.html" class="nav__link">Помочь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Наши питомцы</h2>
+                <p class="section__subtitle">Все кошки привиты, стерилизованы и готовы к переезду в новый дом</p>
+                <div class="pets-grid">
+                    
+                    <article class="pet-card">
+                        <img src="./images/zigmund.png" 
+                             alt="Не Фрейд конечно, но..." 
+                             class="pet-card__image"
+                             loading="lazy">
+                        <div class="pet-card__body">
+                            <h3 class="pet-card__name">Зигмунд</h3>
+                            <p class="pet-card__meta">Кот • 10 месяцев</p>
+                            <p class="pet-card__desc">Интеллигентный кот с серьёзным выражением морды. Очень умный, по его взгляду видно — открывает ящики, любит пить воду из крана и всегда приходит на звук открываемой банки.</p>
+                            <a href="book.html?pet=Зигмунд" class="btn pet-card__btn">Забрать домой</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./images/musya.png" 
+                             alt="Муся это ты..." 
+                             class="pet-card__image"
+                             loading="lazy">
+                        <div class="pet-card__body">
+                            <h3 class="pet-card__name">Муся</h3>
+                            <p class="pet-card__meta">Кошка • 2 года</p>
+                            <p class="pet-card__desc">Ласковая и озорная красавица. Любит сидеть на коленях и мурлыкать.</p>
+                            <a href="book.html?pet=Муся" class="btn pet-card__btn">Забрать домой</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./images/jessy.png" 
+                             alt="Кошка Джесси" 
+                             class="pet-card__image"
+                             loading="lazy">
+                        <div class="pet-card__body">
+                            <h3 class="pet-card__name">Джесси</h3>
+                            <p class="pet-card__meta">Кошка • 4 года</p>
+                            <p class="pet-card__desc">Умная и элегантная дама. Знает команду «сидеть» и приносит игрушки.</p>
+                            <a href="book.html?pet=Джесси" class="btn pet-card__btn">Забрать домой</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./images/bob.png" 
+                             alt="Привет! Это Боб." 
+                             class="pet-card__image"
+                             loading="lazy">
+                        <div class="pet-card__body">
+                            <h3 class="pet-card__name">Боб</h3>
+                            <p class="pet-card__meta">Кот • 1 год</p>
+                            <p class="pet-card__desc">Очень хороший мальчик, я бы его депутатом назначила. Любит запрыгивать на шкафы и наблюдать сверху за всем, что происходит. Ласковый, но только когда сам этого хочет. Отлично ловит мышей (и носки).</p>
+                            <a href="book.html?pet=Боб" class="btn pet-card__btn">Забрать домой</a>
+                        </div>
+                    </article>
+
+                </div>
+                <div style="text-align: center; margin-top: 32px;">
+                    <a href="index.html" class="btn btn--outline"><i class="fa-solid fa-arrow-left"></i> На главную</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__copy">© 2026 Приют «Лапа помощи». Сделано с любовью к кошкам.</p>
+            <ul class="footer__socials">
+                <li><a href="https://vk.com/" target="_blank" rel="noopener" class="footer__social-link" aria-label="ВКонтакте"><i class="fa-brands fa-vk"></i></a></li>
+                <li><a href="https://t.me/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

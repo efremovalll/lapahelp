@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Приют «Лапа помощи» — спасение и пристройство бездомных кошек. Подарите дом пушистому другу.">
+    <title>Приют «Лапа помощи» — Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Приют Лапа помощи — на главную">
+                <i class="fa-solid fa-paw logo__icon"></i>
+                <span>Лапа помощи</span>
+            </a>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+                    <li><a href="pets.html" class="nav__link">Питомцы</a></li>
+                    <li><a href="help.html" class="nav__link">Помочь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Подарите <span>дом</span> пушистому другу</h1>
+                <p class="hero__subtitle">Приют «Лапа помощи» спасает бездомных кошек и помогает им найти любящую семью. Откройте сердце — подарите заботу.</p>
+                <div class="hero__actions">
+                    <a href="pets.html" class="btn">Смотреть питомцев <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="help.html" class="btn btn--outline">Как помочь</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">О приюте</h2>
+                <p class="section__subtitle">Мы работаем с 2020 года и нашли дом для 350+ кошек</p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fa-solid fa-house-chimney about-card__icon"></i>
+                        <h3 class="about-card__title">Приют</h3>
+                        <p>Тёплое помещение с отдельными вольерами, постоянный уход и внимание.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fa-solid fa-stethoscope about-card__icon"></i>
+                        <h3 class="about-card__title">Здоровье</h3>
+                        <p>Все кошки привиты, стерилизованы и проходят ветеринарный осмотр.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fa-solid fa-people-arrows about-card__icon"></i>
+                        <h3 class="about-card__title">Адаптация</h3>
+                        <p>Помогаем питомцу привыкнуть к новому дому и даём рекомендации хозяевам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--bg-white">
+            <div class="container">
+                <h2 class="section__title">Недавно в приюте</h2>
+                <p class="section__subtitle">Эти пушистики только начинают искать свой дом</p>
+                <div class="pets-grid">
+                    <article class="pet-card">
+                        <img src="./images/bam.png" 
+                             alt="Рыжий котёнок Бам" 
+                             class="pet-card__image"
+                             loading="lazy">
+                        <div class="pet-card__body">
+                            <h3 class="pet-card__name">Бам</h3>
+                            <p class="pet-card__meta">Кот • 1 месяц</p>
+                            <p class="pet-card__desc">Любопытный рыжик с характером.</p>
+                            <a href="pets.html" class="btn pet-card__btn">Все питомцы</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card">
+                        <img src="./images/bim.png" 
+                             alt="Котёнок Бам" 
+                             class="pet-card__image"
+                             loading="lazy">
+                        <div class="pet-card__body">
+                            <h3 class="pet-card__name">Бим</h3>
+                            <p class="pet-card__meta">Кот • 1 месяц</p>
+                            <p class="pet-card__desc">Тихий и скромный котёнок.</p>
+                            <a href="pets.html" class="btn pet-card__btn">Все питомцы</a>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 28px;">
+                    <a href="pets.html" class="btn btn--outline">Смотреть всех питомцев <i class="fa-solid fa-paw"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Контакты</h2>
+                <p class="section__subtitle">Свяжитесь с нами, чтобы познакомиться с питомцем или узнать, как помочь</p>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <i class="fa-solid fa-location-dot contacts__icon"></i>
+                        <span>ул. Лесная, 7, Санкт-Петербург</span>
+                    </li>
+                    <li class="contacts__item">
+                        <i class="fa-solid fa-phone contacts__icon"></i>
+                        <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                    </li>
+                    <li class="contacts__item">
+                        <i class="fa-solid fa-envelope contacts__icon"></i>
+                        <a href="mailto:priut@lapa.ru">priut@lapa.ru</a>
+                    </li>
+                    <li class="contacts__item">
+                        <i class="fa-solid fa-clock contacts__icon"></i>
+                        <span>Вт–Вс: 10:00 – 18:00</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__copy">© 2026 Приют «Лапа помощи». Сделано с любовью к кошкам.</p>
+            <ul class="footer__socials">
+                <li><a href="https://vk.com/" target="_blank" rel="noopener" class="footer__social-link" aria-label="ВКонтакте"><i class="fa-brands fa-vk"></i></a></li>
+                <li><a href="https://t.me/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
